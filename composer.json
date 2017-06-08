@@ -6,6 +6,7 @@
         "php": "^7.1",
         "symfony/flex": "^1.0",
         "symfony/framework-bundle": "^3.3",
+        "symfony/orm-pack": "dev-master",
         "symfony/yaml": "^3.3"
     },
     "require-dev": {
@@ -22,12 +23,12 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "ANTournament\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "App\\Tests\\": "tests/"
+            "ANTournament\\Tests\\": "tests/"
         }
     },
     "scripts": {
