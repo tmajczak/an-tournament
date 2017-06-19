@@ -7,6 +7,7 @@
 
 namespace ANTournament\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -22,5 +23,19 @@ class Tournament
      *
      * @var int
      */
-    public $id;
+    private $id;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Round", mappedBy="tournament", cascade={"persist", "remove"})
+     *
+     * @var ArrayCollection
+     */
+    private $rounds;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Player", mappedBy="tournament", cascade={"persist", "remove"})
+     *
+     * @var ArrayCollection
+     */
+    private $players;
 }

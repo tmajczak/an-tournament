@@ -22,5 +22,19 @@ class Identity
      *
      * @var int
      */
-    public $id;
+    private $id;
+
+    /**
+     * @ORM\Column(name="name")
+     *
+     * @var string
+     */
+    private $name;
+
+    /**
+     * @ORM\Column(name="faction")
+     *
+     * @var string
+     */
+    private $faction;
 }

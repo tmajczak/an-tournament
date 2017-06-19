@@ -7,6 +7,7 @@
 
 namespace ANTournament\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -22,5 +23,20 @@ class Round
      *
      * @var int
      */
-    public $id;
+    private $id;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Tournament", inversedBy="rounds")
+     * @ORM\JoinColumn(name="tournament_id", referencedColumnName="id")
+     *
+     * @var Tournament
+     */
+    private $tournament;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Match", mappedBy="round", cascade={"persist", "remove"})
+     *
+     * @var ArrayCollection
+     */
+    private $matches;
 }

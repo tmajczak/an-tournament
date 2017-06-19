@@ -22,5 +22,40 @@ class Game
      *
      * @var int
      */
-    public $id;
+    private $id;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Match", inversedBy="games")
+     *
+     * @var Match
+     */
+    private $match;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Player")
+     *
+     * @var Player
+     */
+    private $runnerPlayer;
+
+    /**
+     * @ORM\Column(name="runner_points", type="smallint")
+     *
+     * @var int
+     */
+    private $runnerPoints = 0;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Player")
+     *
+     * @var Player
+     */
+    private $corpPlayer;
+
+    /**
+     * @ORM\Column(name="corp_points", type="smallint")
+     *
+     * @var int
+     */
+    private $corpPoints = 0;
 }
