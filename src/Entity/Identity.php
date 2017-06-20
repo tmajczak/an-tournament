@@ -37,4 +37,52 @@ class Identity
      * @var string
      */
     private $faction;
+
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param string $name
+     *
+     * @return Identity
+     */
+    public function setName(string $name): Identity
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFaction(): string
+    {
+        return $this->faction;
+    }
+
+    /**
+     * @param string $faction
+     *
+     * @return Identity
+     */
+    public function setFaction(string $faction): Identity
+    {
+        $this->faction = $faction;
+
+        return $this;
+    }
 }

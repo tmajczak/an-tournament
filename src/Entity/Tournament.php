@@ -38,4 +38,52 @@ class Tournament
      * @var ArrayCollection
      */
     private $players;
+
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return ArrayCollection
+     */
+    public function getRounds(): ArrayCollection
+    {
+        return $this->rounds;
+    }
+
+    /**
+     * @param ArrayCollection $rounds
+     *
+     * @return Tournament
+     */
+    public function setRounds(ArrayCollection $rounds): Tournament
+    {
+        $this->rounds = $rounds;
+
+        return $this;
+    }
+
+    /**
+     * @return ArrayCollection
+     */
+    public function getPlayers(): ArrayCollection
+    {
+        return $this->players;
+    }
+
+    /**
+     * @param ArrayCollection $players
+     *
+     * @return Tournament
+     */
+    public function setPlayers(ArrayCollection $players): Tournament
+    {
+        $this->players = $players;
+
+        return $this;
+    }
 }

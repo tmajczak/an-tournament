@@ -39,4 +39,52 @@ class Round
      * @var ArrayCollection
      */
     private $matches;
+
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return Tournament
+     */
+    public function getTournament(): Tournament
+    {
+        return $this->tournament;
+    }
+
+    /**
+     * @param Tournament $tournament
+     *
+     * @return Round
+     */
+    public function setTournament(Tournament $tournament): Round
+    {
+        $this->tournament = $tournament;
+
+        return $this;
+    }
+
+    /**
+     * @return ArrayCollection
+     */
+    public function getMatches(): ArrayCollection
+    {
+        return $this->matches;
+    }
+
+    /**
+     * @param ArrayCollection $matches
+     *
+     * @return Round
+     */
+    public function setMatches(ArrayCollection $matches): Round
+    {
+        $this->matches = $matches;
+
+        return $this;
+    }
 }

@@ -49,4 +49,53 @@ class Match
 //     * @var ArrayCollection
 //     */
 //    private $players;
+
+
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return Round
+     */
+    public function getRound(): Round
+    {
+        return $this->round;
+    }
+
+    /**
+     * @param Round $round
+     *
+     * @return Match
+     */
+    public function setRound(Round $round): Match
+    {
+        $this->round = $round;
+
+        return $this;
+    }
+
+    /**
+     * @return ArrayCollection
+     */
+    public function getGames(): ArrayCollection
+    {
+        return $this->games;
+    }
+
+    /**
+     * @param ArrayCollection $games
+     *
+     * @return Match
+     */
+    public function setGames(ArrayCollection $games): Match
+    {
+        $this->games = $games;
+
+        return $this;
+    }
 }

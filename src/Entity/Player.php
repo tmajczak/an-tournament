@@ -68,4 +68,132 @@ class Player
      * @var float
      */
     private $sos = 0.00;
+
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return Tournament
+     */
+    public function getTournament(): Tournament
+    {
+        return $this->tournament;
+    }
+
+    /**
+     * @param Tournament $tournament
+     *
+     * @return Player
+     */
+    public function setTournament(Tournament $tournament): Player
+    {
+        $this->tournament = $tournament;
+
+        return $this;
+    }
+
+    /**
+     * @return Identity
+     */
+    public function getRunner(): Identity
+    {
+        return $this->runner;
+    }
+
+    /**
+     * @param Identity $runner
+     *
+     * @return Player
+     */
+    public function setRunner(Identity $runner): Player
+    {
+        $this->runner = $runner;
+
+        return $this;
+    }
+
+    /**
+     * @return Identity
+     */
+    public function getCorporation(): Identity
+    {
+        return $this->corporation;
+    }
+
+    /**
+     * @param Identity $corporation
+     *
+     * @return Player
+     */
+    public function setCorporation(Identity $corporation): Player
+    {
+        $this->corporation = $corporation;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param string $name
+     *
+     * @return Player
+     */
+    public function setName(string $name): Player
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPoints(): int
+    {
+        return $this->points;
+    }
+
+    /**
+     * @param int $points
+     *
+     * @return Player
+     */
+    public function setPoints(int $points): Player
+    {
+        $this->points = $points;
+
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getSos(): float
+    {
+        return $this->sos;
+    }
+
+    /**
+     * @param float $sos
+     *
+     * @return Player
+     */
+    public function setSos(float $sos): Player
+    {
+        $this->sos = $sos;
+
+        return $this;
+    }
 }
